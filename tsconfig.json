@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "strict": true,
+    "types": ["node", "mocha", "chai", "@wdio/globals/types"],
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "outDir": "dist"
+  },
+  "include": ["./test", "./wdio.conf.ts"]
+}
