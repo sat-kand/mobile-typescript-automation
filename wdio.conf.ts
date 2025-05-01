@@ -1,5 +1,3 @@
-// import { Config } from '@wdio/types'
-
 const config = {
     runner: 'local',
     // specs: ['./src/test/*.ts'],
