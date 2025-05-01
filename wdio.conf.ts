@@ -1,29 +1,39 @@
-import { Config } from '@wdio/types'
+// import { Config } from '@wdio/types'
 
-export const config: Config = {
+const config = {
     runner: 'local',
-    specs: ['./test/specs/**/*.ts'],
+    // specs: ['./src/test/*.ts'],
+       specs: [
+        './src/test/forms.test.ts',
+        './src/test/swipe.test.ts',
+        './src/test/login.test.ts',
+      ],
     maxInstances: 1,
-    port: 4723, // ✅ Connect to existing Appium port
-    hostname: '127.0.0.1', // ✅ localhost
-    path: '/', // ✅ Default base path
+    port: 4723,
+    hostname: '127.0.0.1',
+    path: '/',
     capabilities: [{
-        platformName: 'Android',
-        'appium:platformVersion': '14', // use your device's Android version
-        'appium:deviceName': 'Android Emulator',
-        'appium:automationName': 'UiAutomator2',
-        'appium:app': '/Users/SathishKumar/Downloads/mobile-automation-ts-full-framework/app/androidwdioapp.apk',
-        'appium:autoGrantPermissions': true
+      platformName: 'Android',
+      'appium:platformVersion': '14',
+      'appium:deviceName': 'Android Emulator',
+      'appium:automationName': 'UiAutomator2',
+      'appium:app': '/Users/SathishKumar/Downloads/mobile-automation-ts-full-framework/app/androidwdioapp.apk',
+      'appium:autoGrantPermissions': true
     }],
     logLevel: 'info',
     framework: 'mocha',
     reporters: [
-        'spec',
-        ['allure', { outputDir: 'allure-results', disableWebdriverStepsReporting: true }]
+      'spec',
+      ['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true
+      }]
     ],
     mochaOpts: {
-        ui: 'bdd',
-        timeout: 60000
+      ui: 'bdd',
+      timeout: 60000
     },
-    // ❌ REMOVE appium service section
-}
+  };
+  
+  exports.config = config;
+  

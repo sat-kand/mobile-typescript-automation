@@ -1,7 +1,23 @@
+// {
+//   "compilerOptions": {
+//     "target": "ES2020",
+//     "module": "ESNext",
+//     "moduleResolution": "Node",
+//     "esModuleInterop": true,
+//     "allowJs": true,
+//     "strict": true,
+//     "types": ["node", "mocha", "chai", "@wdio/globals/types"],
+//     "skipLibCheck": true,
+//     "resolveJsonModule": true,
+//     "outDir": "dist"
+//   },
+//   "include": ["./test", "./wdio.conf.ts"]
+// }
+
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "allowJs": true,
@@ -9,7 +25,13 @@
     "types": ["node", "mocha", "chai", "@wdio/globals/types"],
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@pages/*": ["src/pageobjects/*"],
+      "@specs/*": ["src/test/*"]
+    }
   },
-  "include": ["./test", "./wdio.conf.ts"]
+  "include": ["./src", "./wdio.conf.ts"],
+  "exclude": ["node_modules", "dist"]
 }
