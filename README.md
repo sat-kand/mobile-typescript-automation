@@ -31,8 +31,8 @@ This project is a mobile automation framework built using WebDriverIO v8, Appium
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd mobile-automation-framework
+   git clone https://github.com/sat-kand/mobile-typescript-automation
+   cd mobile-typescript-automation
    ```
 
 2. **Install dependencies:**
@@ -56,7 +56,7 @@ This project is a mobile automation framework built using WebDriverIO v8, Appium
 To run the tests, execute the following command:
 
 ```bash
-npx wdio run wdio.conf.ts
+npm test
 ```
 
 This will run all the tests in the `src/test/` directory.
