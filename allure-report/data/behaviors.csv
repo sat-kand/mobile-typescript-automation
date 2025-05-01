@@ -1,6 +1,4 @@
 "BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
-"1","","0","Drag Test","0","0","","0"
-"0","","0","Forms Test","1","0","","0"
-"1","","0","WebView Test","0","0","","0"
 "0","","1","Login Test","0","0","","0"
+"0","","0","Forms Test","1","0","","0"
 "1","","0","Swipe Test","0","0","","0"
